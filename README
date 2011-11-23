@@ -1,3 +1,5 @@
+Test project to reproduce a problem in scala-ide that prevents java-source from being compiled correctly. This project does not contain any scala source, but one module is using the maven-scala-plugin and should be set up as a scala project in scala-ide. With m2e, scala-ide and m2eclipse-scala this will be detected and set up automatically.
+
 (Remember to check settings -> maven -> Hide folders of physically nested modules)
 Import into Eclipse using m2e (import -> existing maven project).
 
