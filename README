@@ -1,0 +1,17 @@
+(Remember to check settings -> maven -> Hide folders of physically nested modules)
+Import into Eclipse using m2e (import -> existing maven project).
+
+Using release/scala-ide-2.0.x:
+1. Do a clean build and check that target contains A, B, C and Problem.class
+2. Modify any of A, B or C.java and see that Problem.class disappears from target folder.
+
+Using issue/get-java-to-follow-sbt-1000388:
+1. Do a clean build and check that target contains A, B, C and Problem.class
+2. Modify any of B or C.java and see that Problem.class is still in the output folder.
+3. Modify A.java and see that Problem.class disappears from target folder.
+
+No matter which source gets modified, Problem.java is always requested recompiled even though it does not depend on any of the other sources. Is this the expected behaviour?
+
+[AnalysisCompile] Compiling:
+  /Users/frode/dev/simple/scala-java/src/main/java/test/Problem.java
+[AnalysisCompile] Compilation was successful
